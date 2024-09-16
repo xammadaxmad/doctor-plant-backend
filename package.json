@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "nodemon app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "generate-docs": "node docs/swagger-schema-generator.js"
   },
   "keywords": [],
   "author": "",
@@ -16,9 +17,12 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.4.4",
+    "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.14",
     "nodemon": "^3.1.4",
+    "request": "^2.88.2",
+    "swagger-autogen": "^2.23.7",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   }

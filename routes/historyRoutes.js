@@ -16,8 +16,8 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-router.post('/upload-image', authMiddleware.authenticateToken, upload.single('image'), historyController.uploadImage);
-router.get('/get', authMiddleware.authenticateToken, historyController.getHistory);
-router.delete('/:id', authMiddleware.authenticateToken, historyController.deleteHistory);
+router.post('/api/history/upload-image', authMiddleware.authenticateToken, upload.single('image'), historyController.uploadImage);
+router.get('/api/history/get', authMiddleware.authenticateToken, historyController.getHistory);
+router.delete('/api/history/:id', authMiddleware.authenticateToken, historyController.deleteHistory);
 
 module.exports = router;
