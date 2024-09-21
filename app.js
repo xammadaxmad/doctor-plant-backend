@@ -38,8 +38,8 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`Backend Server: http://localhost:${port}`);
-    console.log(`Swagger documentation is running at http://localhost:${port}/api/docs`)
+    console.log(`Backend Server: http://localhost:${PORT}`);
+    console.log(`Swagger documentation is running at http://localhost:${PORT}/api/docs`)
 });
 
-initializeSwaggerUi(app, port)
+initializeSwaggerUi(app, PORT)

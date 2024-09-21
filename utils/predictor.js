@@ -1,7 +1,8 @@
 let request = require('request');
 
-function getPlantHealthStatusFromAPI(image, apiKey = "MfZVkMyQUegVE6mqNK8FwlYtVQbYsJB7PwIBemeRf7zWWHmg7d") {
+function getPlantHealthStatusFromAPI(image) {
     return new Promise((resolve, reject) => {
+        let apiKey = process.env.PREDICTOR_KEY
         const options = {
             method: 'POST',
             url: 'https://plant.id/api/v3/health_assessment',
